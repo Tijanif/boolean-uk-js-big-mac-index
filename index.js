@@ -37,9 +37,9 @@ let countryCurrencyRateToUS = 1.39;
 let subtractedCurrencyRateWithImpliedPurchasingPower = (countryCurrencyRateToUS - impliedPurchasingPower) / impliedPurchasingPower;
 
 
-let bigMacIndex = subtractedCurrencyRateWithImpliedPurchasingPower.toFixed(2)
+let bigMacIndexUK = subtractedCurrencyRateWithImpliedPurchasingPower.toFixed(2)
 console.log(subtractedCurrencyRateWithImpliedPurchasingPower.toFixed(2))
-console.log(`The Big Mac index UK to us is: ${parseFloat(bigMacIndex)}%`)
+console.log(`UK's big Mac index is: ${parseFloat(bigMacIndexUK)}%`)
 
 
 // France
@@ -58,7 +58,7 @@ let subtractedCurrencyRateWithImpliedPurchasingPowerUsFrance = (countryCurrencyR
 
 let bigMacIndexFrance = subtractedCurrencyRateWithImpliedPurchasingPowerUsFrance.toFixed(2)
 console.log(subtractedCurrencyRateWithImpliedPurchasingPowerUsFrance.toFixed(2))
-console.log(`The Big Mac index France to us is: ${parseFloat(bigMacIndexFrance)}%`)
+console.log(`France's big Mac index is: ${parseFloat(bigMacIndexFrance)}%`)
 
 // Russia
 1.23
@@ -73,4 +73,27 @@ let subtractedCurrencyRateWithImpliedPurchasingPowerUsRussia = (countryCurrencyR
 
 let bigMacIndexRussia = subtractedCurrencyRateWithImpliedPurchasingPowerUsRussia.toFixed(2)
 console.log(subtractedCurrencyRateWithImpliedPurchasingPowerUsRussia.toFixed(2))
-console.log(`The Big Mac index Russia to us is: ${parseFloat(bigMacIndexRussia)}%`)
+console.log(`Russia's big Mac index is: ${parseFloat(bigMacIndexRussia)}%`)
+
+	1.55
+  // Turkey
+
+  let currentTurkeyBigMacPrice = 1.23;
+// implied purchasing power
+let impliedPurchasingPowerUsTurkey = currentUsBigMacPrice / currentTurkeyBigMacPrice;
+
+// France currency rate to USD 1.39
+let countryCurrencyRateToUSTurkey = 	1.55;
+
+let subtractedCurrencyRateWithImpliedPurchasingPowerUsTurkey = (countryCurrencyRateToUSTurkey - impliedPurchasingPowerUsTurkey) / impliedPurchasingPowerUsTurkey;
+
+let bigMacIndexTurkey = subtractedCurrencyRateWithImpliedPurchasingPowerUsTurkey.toFixed(2)
+console.log(subtractedCurrencyRateWithImpliedPurchasingPowerUsTurkey.toFixed(2))
+console.log(`Turkey's big Mac index is: ${parseFloat(bigMacIndexTurkey)}%`)
+
+// Boolaen
+
+console.log(`Is Turkey's BMI greater than Russia's BMI?:`, bigMacIndexTurkey > bigMacIndexRussia)
+
+console.log(`Is UK's BMI greater than Russia's BMI?:`, bigMacIndexUK > bigMacIndexRussia)
+console.log(`Is France's BMI smaller than Russia's BMI?:`, bigMacIndexFrance < bigMacIndexUK)
